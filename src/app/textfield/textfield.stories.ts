@@ -4,13 +4,14 @@ import { AttributesStatesDefault, withPseudo } from "@ergosign/storybook-addon-p
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 export default {
     title : 'Input field',
     // decorators: [withPseudo],
     decorators: [ withPseudo,
         moduleMetadata({
           declarations: [ TextfieldComponent ],
-          imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule],
+          imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
         }),
     ],
     parameters: {
