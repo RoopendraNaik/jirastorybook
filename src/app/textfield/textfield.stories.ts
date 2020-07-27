@@ -8,18 +8,19 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 export default {
     title : 'Input field',
     // decorators: [withPseudo],
-    decorators: [ withPseudo,
+    decorators: [ 
+        // withPseudo,
         moduleMetadata({
           declarations: [ TextfieldComponent ],
           imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
         }),
     ],
-    parameters: {
-        withPseudo: {
-            selector: 'input',
-            attributes: [...AttributesStatesDefault]
-        }
-    }
+    // parameters: {
+    //     withPseudo: {
+    //         selector: 'input',
+    //         attributes: [...AttributesStatesDefault]
+    //     }
+    // }
 };
 
 export const defaultState = () => ({

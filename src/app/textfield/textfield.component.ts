@@ -7,8 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TextfieldComponent implements OnInit {
 
-  @Input() placeholder= "e.g placeholder";
-  @Input() label= "label";
+  @Input() placeHolder= "e.g placeholder";
+  @Input() Label= "label";
+  @Input() errorMessage= "This fiels is required"
 
   constructor() { }
 

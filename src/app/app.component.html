@@ -1,3 +1,12 @@
 <app-ui-button text="Home button"></app-ui-button>
 <app-textfield></app-textfield>
+
+
+
+<form [formGroup]="exampleForm">
+    <app-text-field formControlName="email" label="Email" placeHolder="example@gmail.com" errorMessage="Meion emak">
+    </app-text-field>
+    <app-text-field formControlName="password" label="password" errorMessage="Password requires">
+    </app-text-field>
+</form>
 <router-outlet></router-outlet>
