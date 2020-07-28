@@ -4,8 +4,8 @@
 
 
 <form [formGroup]="exampleForm">
-    <app-textfield [FormControlName]="exampleForm.get('email')" type="text" label="Email" placeholder="example@gmail.com" errorMessage="Meion emak"> </app-textfield>
-    <app-textfield [FormControlName]="exampleForm.get('password')" type="text"label="Password" errorMessage="Password requires"></app-textfield>
+    <app-textfield [FormControlName]="exampleForm.get('email')" type="text" label="Email" placeholder="example@gmail.com"> </app-textfield>
+    <app-textfield [FormControlName]="exampleForm.get('password')" type="password" label="Password" ></app-textfield>
 <p>
     {{exampleForm.value | json}}
 </p>
