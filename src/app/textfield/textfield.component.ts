@@ -10,9 +10,9 @@ export class TextfieldComponent implements OnInit {
 
   @Input() placeholder= "e.g placeholder";
   @Input() label= "label";
-  @Input() type= "text";
+  @Input() type = "text";
   @Input() FormControlName: FormControl;
-  @Input() errorMessage= "This fiels is required"
+  @Input() errorMessage= "This field is required"
   dummyForm: FormGroup;
   constructor(private fb: FormBuilder) {}
 
