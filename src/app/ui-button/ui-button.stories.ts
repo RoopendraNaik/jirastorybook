@@ -29,22 +29,22 @@ storiesOf('Button', module)
     )
     .add('default', () => {
         return {
-            template: `<app-ui-button text="Button1" state="default"></app-ui-button>`,
+            template: `<app-ui-button text="Button" state="default"></app-ui-button>`,
         }
     }
     )
     .add('hover', () => {
         return {
-            template: `<app-ui-button text="Button2" state="hover"></app-ui-button>`,
+            template: `<app-ui-button text="Button" state="hover"></app-ui-button>`,
         }    
     })
     .add('focus', () => {
         return {
-            template: `<app-ui-button text="Button3" state="focus"></app-ui-button>`,
+            template: `<app-ui-button text="Button" state="focus"></app-ui-button>`,
         }    
     })
     .add('disabled', () => {
         return {
-            template: `<app-ui-button text="Button4" state="disabled"></app-ui-button>`,
+            template: `<app-ui-button text="Button" state="disabled"></app-ui-button>`,
         }
     })

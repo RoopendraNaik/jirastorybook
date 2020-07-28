@@ -11,7 +11,7 @@ export class AppComponent {
   exampleForm: FormGroup
   constructor(private Fb: FormBuilder){
     this.exampleForm = this.Fb.group({
-      email: ['',Validators.required],
+      email: [''],
       password: ['',Validators.required]
     }) 
   }

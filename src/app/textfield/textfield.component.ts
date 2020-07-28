@@ -12,9 +12,14 @@ export class TextfieldComponent implements OnInit {
   @Input() label= "label";
   @Input() type= "text";
   @Input() FormControlName: FormControl;
-  @Input() errorMessage= "This fiels is required"
+  @Input() errorMessage= "This fiels is required";
+  @Input() hint: string;
+
   dummyForm: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {
+    console.log("logging passed values");
+    console.log(this.FormControlName);
+  }
 
   ngOnInit(): void {
   }

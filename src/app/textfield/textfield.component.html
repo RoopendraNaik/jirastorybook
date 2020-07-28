@@ -1,7 +1,11 @@
 <div style="padding: 20px;" class="form-group">
     <mat-form-field floatLabel="never" class="block" appearance="outline">
         <mat-label>{{label}}</mat-label>
-        <input [formControl]="FormControlName" matInput type="type" placeholder={{placeholder}}/>
+        <input *ngIf="FormControlName else notinform" [formControl]="FormControlName" matInput type="type" placeholder={{placeholder}}/>
+        <ng-template #notinform>
+            <input type="text" matInput placeholder={{placeholder}}>
+        </ng-template>
+        <mat-hint *ngIf="hint">{{hint}}</mat-hint>
         <mat-error> {{errorMessage}} </mat-error>
     </mat-form-field>
 </div>

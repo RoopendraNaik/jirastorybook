@@ -1,14 +1,14 @@
 <app-ui-button text="Home button" (click)="somefun()"></app-ui-button>
-<!-- <app-textfield></app-textfield> -->
+<app-textfield hint="some value"></app-textfield>
 
 
 
-<form [formGroup]="exampleForm">
+<!-- <form [formGroup]="exampleForm">
     <app-textfield [FormControlName]="exampleForm.get('email')" type="text" label="Email" placeholder="example@gmail.com" errorMessage="Meion emak"> </app-textfield>
     <app-textfield [FormControlName]="exampleForm.get('password')" type="text"label="Password" errorMessage="Password requires"></app-textfield>
 <p>
     {{exampleForm.value | json}}
 </p>
-</form>
+</form> -->
 
 <router-outlet></router-outlet>
