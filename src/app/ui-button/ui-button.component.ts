@@ -10,37 +10,43 @@ export class UiButtonComponent implements OnInit {
 
   @Input() text: string;
 
-  @Output() clickFn = new EventEmitter<MouseEvent>();
+  @Input() state= "default"
+  // @Input() fun = () => {
+  //   console.log("clicked");
+  // }
+  // @Output() clickFn = new EventEmitter<MouseEvent>();
 
   disabled = false;
   constructor() { }
 
   ngOnInit(): void {
-    //console.log(this.state);
-    // switch (this.state) {
-    //   case "default":
-    //     break;
+    switch (this.state) {
+      case "default":
+        break;
 
-    //   case "hover":
-    //     document.getElementById('InvsionBtn').classList.add("hover");
-    //     break;
+      case "hover":
+        document.getElementById('InvsionBtn').classList.add("hover");
+        break;
 
-    //   case "focus":
-    //     document.getElementById('InvsionBtn').classList.add("focus");
-    //     break;
+      case "focus":
+        document.getElementById('InvsionBtn').classList.add("focus");
+        break;
 
-    //   case "disabled":
-    //     this.disabled = true;
-    //     document.getElementById('InvsionBtn').classList.add("disabled");
-    //     break;
+      case "disabled":
+        this.disabled = true;
+        document.getElementById('InvsionBtn').classList.add("disabled");
+        break;
 
-    //   default:
-    //     break;
-    // }
-  }
-  clickHandler(event: MouseEvent) {
-    if (!this.disabled) {
-      this.clickFn.emit(event);
+      default:
+        break;
     }
   }
+  // clickHandler(event: MouseEvent) {
+  //   console.log("i am in ");
+    
+  //   if (!this.disabled) {
+  //     this.clickFn.emit(event);
+  //     this.fun;
+  //   }
+  // }
 }

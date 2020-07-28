@@ -15,4 +15,7 @@ export class AppComponent {
       password: ['',Validators.required]
     }) 
   }
+  somefun = ()=> {
+    console.log("logged");
+  }
 }
