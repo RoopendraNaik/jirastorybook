@@ -32,36 +32,36 @@ storiesOf('text-field',module)
     )
     .add('Default',()=>{
         return {
-            template: `<app-textfield hint="Assertive Text" label="Label" placeholder="e.g placeholder"></app-textfield>`
+            template: `<app-textfield hint="Assistive Text" label="Overline Label"></app-textfield>`
         }
     })
     .add('Focused',()=>{
         return {
-            template: `<app-textfield ></app-textfield>`
+            template: `<app-textfield hint="Assistive Text" label="Overline Label" floatLabelValue="always"></app-textfield>`
         }
     })    
     .add('Focused with PlaceHolder Text',()=>{
         return {
-            template: `<app-textfield ></app-textfield>`
+            template: `<app-textfield hint="Assistive Text" label="Overline Label" floatLabelValue="always" placeholder="e.g placeholder"></app-textfield>`
         }
     })
     .add('Focused with Input',()=>{
         return {
-            template: `<app-textfield ></app-textfield>`
+            template: `<app-textfield inputText="Input Text" hint="Assistive Text" label="Overline Label" floatLabelValue="always"></app-textfield>`
         }
     })
     .add('Default Error',()=>{
         return {
-            template: `<app-textfield ></app-textfield>`
+            template: `<app-textfield hasError="true"></app-textfield>`
         }
     })
     .add('Focused Error',()=>{
         return {
-            template: `<app-textfield ></app-textfield>`
+            template: `<app-textfield label="OverLine Label" floatLabelValue="always" ></app-textfield>`
         }
     })
     .add('Disabled',()=>{
         return {
-            template: `<app-textfield ></app-textfield>`
+            template: `<app-textfield hint="Assistive Text" isDisabled="true"></app-textfield>`
         }
     })
