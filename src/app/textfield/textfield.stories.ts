@@ -47,21 +47,21 @@ storiesOf('text-field',module)
     })
     .add('Focused with Input',()=>{
         return {
-            template: `<app-textfield inputText="Input Text" hint="Assistive Text" label="Overline Label" floatLabelValue="always"></app-textfield>`
+            template: `<app-textfield state="Focused with Input" hint="Assistive Text" label="Overline Label" floatLabelValue="always"></app-textfield>`
         }
     })
     .add('Default Error',()=>{
         return {
-            template: `<app-textfield hasError="true"></app-textfield>`
+            template: `<app-textfield state="Default Error"></app-textfield>`
         }
     })
     .add('Focused Error',()=>{
         return {
-            template: `<app-textfield label="OverLine Label" floatLabelValue="always" ></app-textfield>`
+            template: `<app-textfield state="Focused Error" label="OverLine Label" ></app-textfield>`
         }
     })
     .add('Disabled',()=>{
         return {
-            template: `<app-textfield hint="Assistive Text" isDisabled="true"></app-textfield>`
+            template: `<app-textfield state="Disabled" hint="Assistive Text"></app-textfield>`
         }
     })
