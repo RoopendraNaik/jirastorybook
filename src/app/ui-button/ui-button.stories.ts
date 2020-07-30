@@ -1,5 +1,6 @@
 import { UiButtonComponent } from "./ui-button.component";
 import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { boolean, number, text, withKnobs } from '@storybook/addon-knobs';
 import { AttributesStatesDefault, withPseudo } from "@ergosign/storybook-addon-pseudo-states-angular";
 // export default {
 //     title : 'Button',
@@ -18,9 +19,16 @@ import { AttributesStatesDefault, withPseudo } from "@ergosign/storybook-addon-p
 //         text: 'Button'
 //     } 
 // });
+   
+//   export const withKnobs = () => ({
+//     component: Button,
+//     props: {
+//       text: text('text', 'Hello Storybook'), // The first param of the knob function has to be exactly the same as the component input.
+//     },
+//   });
 
 storiesOf('Button', module)
-    //.addDecorator(withPseudo)
+.addDecorator(withKnobs)
     .addDecorator(
         moduleMetadata({
             declarations: [UiButtonComponent],
