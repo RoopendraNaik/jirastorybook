@@ -1,11 +1,14 @@
 <app-ui-button text="Home button" (click)="somefun()"></app-ui-button>
+
 <app-textfield hint="some value"></app-textfield>
 
-
+<app-textfield hint="some value" state="Disabled"></app-textfield>
+<app-textfield hint="some value" state="Default Error"></app-textfield>
+<app-textfield hint="some value" state="Focused Error" ></app-textfield>
 
 <form [formGroup]="exampleForm">
     <app-textfield [FormControlName]="exampleForm.get('email')" type="text" label="Email" placeholder="example@gmail.com"> </app-textfield>
-    <app-textfield [FormControlName]="exampleForm.get('password')" type="password" label="Password" ></app-textfield>
+    <app-textfield state="Disabled" [FormControlName]="exampleForm.get('password')" type="password" label="Password" ></app-textfield>
 <p>
     {{exampleForm.value | json}}
 </p>
