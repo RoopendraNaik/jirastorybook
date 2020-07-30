@@ -8,23 +8,62 @@ import { MatInput } from '@angular/material/input';
   styleUrls: ['./textfield.component.scss']
 })
 export class TextfieldComponent implements OnInit {
-  @Input() placeholder= "";
-  @Input() label= "Label";
+  @Input() placeholder = "";
+  @Input() label = "Label";
   @Input() type = "text";
   @Input() FormControlName: FormControl;
-  @Input() errorMessage= "This field is required";
+  @Input() errorMessage = "This field is required";
   @Input() hint: string;
   @Input() floatLabelValue = "never";
-  @Input() inputText = "";
-  @Input() isDisabled = false;
-  public form: FormGroup;
+  // @Input() inputText = "";
+  // @Input() isDisabled = false;
+  // @Input() hasError: boolean;
+  @Input() state;
+  inputText: string;
+  isDisabled: boolean;
+  hasError: boolean;
 
-  dummyForm: FormGroup;
+  errorForm: FormGroup;
   constructor(private fb: FormBuilder) {
-    console.log(this.FormControlName);
-
+    this.errorForm = this.fb.group({
+      inputField: ['', Validators.required]
+    })
   }
 
+  markFormGroupTouched(formGroup: FormGroup) {
+    (<any>Object).values(formGroup.controls).forEach(control => {
+      control.markAsTouched();
+
+      if (control.controls) {
+        this.markFormGroupTouched(control);
+      }
+    });
+  }
+
+
   ngOnInit(): void {
-    console.log('---inisde ngonit');
-}}
+
+    console.log('---state is');
+    console.log(this.state);
+    switch(this.state){
+      case 'Focused with Input':
+        this.inputText = "Input Text";
+        break;
+      case 'Disabled':
+          this.isDisabled = true;
+          this.FormControlName.disable();
+          break;
+      case 'Focused Error':
+        this.hasError = true;
+        this.floatLabelValue = "always";
+        break;
+      case 'Default Error':
+          this.hasError = true;
+          break;
+    }
+
+    if(this.hasError){
+      this.markFormGroupTouched(this.errorForm);
+    }
+  }
+}
