@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 //         placeholder: 'e.g Rahul'
 //     } 
 // });
-storiesOf('text-field',module)
+storiesOf('Text-Field',module)
     .addDecorator(
         moduleMetadata({
             declarations: [TextfieldComponent],
