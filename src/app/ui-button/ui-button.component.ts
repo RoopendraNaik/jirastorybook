@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { boolean, number, text, withKnobs, button } from '@storybook/addon-knobs';
 
 @Component({
   selector: 'app-ui-button',
@@ -9,8 +10,8 @@ export class UiButtonComponent implements OnInit {
   // @Input() state: string;
 
   @Input() text: string;
-
-  @Input() state= "default"
+  @Input() bgcolor: string;
+  @Input() state= "default";
   // @Input() fun = () => {
   //   console.log("clicked");
   // }
@@ -20,6 +21,7 @@ export class UiButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
     switch (this.state) {
       case "default":
         break;
@@ -40,6 +42,12 @@ export class UiButtonComponent implements OnInit {
       default:
         break;
     }
+  }
+
+  ngOnChanges(){    
+    document.getElementById('InvsionBtn').style.backgroundColor = this.bgcolor;
+    console.log('---inside ngOnchanges');
+    console.log(this.bgcolor);
   }
   // clickHandler(event: MouseEvent) {
   //   console.log("i am in ");
