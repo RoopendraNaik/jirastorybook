@@ -51,7 +51,7 @@ export class TextfieldComponent implements OnInit {
         break;
       case 'Disabled':
           this.isDisabled = true;
-          this.FormControlName.disable();
+          if(this.FormControlName) this.FormControlName.disable();
           break;
       case 'Focused Error':
         this.hasError = true;
