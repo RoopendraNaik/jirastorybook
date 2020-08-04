@@ -49,7 +49,7 @@ storiesOf('Button', module)
     // )
     .add('Default', () => {
         return {
-            template: `<app-ui-button text="Button" state="disabled"></app-ui-button>`,
+            template: `<app-ui-button text="Button" state="default"></app-ui-button>`,
         }
     })
     .add('Hover', () => {
